@@ -9,7 +9,7 @@ import (
 
 // CONSTANTES QUE SÃO DADOS DA CONEXÃO
 const (
-	host     = "localhost"
+	host     = "go_db"
 	port     = 5432
 	user     = "postgres"
 	password = "123"
@@ -28,7 +28,7 @@ func ConnectDB() (*sql.DB, error) {
 		panic(err)
 	}
 
-	//ping para ver se a conexão terá sucesso, caso sim retorna o db, que é a conexão com o bacno
+	//ping para ver se a conexão terá sucesso, caso sim retorna o db, que é a conexão com o banco
 	err = db.Ping()
 	if err != nil {
 		panic(err)
